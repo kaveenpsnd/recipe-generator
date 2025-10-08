@@ -87,5 +87,7 @@ export const STORAGE_KEYS = {
   USER_TOKEN: '@kitchengenie:user_token',
   USER_PROFILE: '@kitchengenie:user_profile',
   PANTRY_ITEMS: '@kitchengenie:pantry_items',
+  RECENT_RECIPES: '@kitchengenie:recent_recipes',
+  SAVED_RECIPES: '@kitchengenie:saved_recipes',
   ONBOARDING_COMPLETED: '@kitchengenie:onboarding_completed',
 } as const;
