@@ -1,0 +1,140 @@
+{
+  "app": {
+    "name": "KitchenGenie",
+    "tagline": "Transform your pantry into delicious recipes"
+  },
+  "auth": {
+    "login": "Log In",
+    "signup": "Sign Up",
+    "logout": "Log Out",
+    "email": "Email",
+    "password": "Password",
+    "displayName": "Display Name",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithApple": "Continue with Apple"
+  },
+  "onboarding": {
+    "slide1": {
+      "title": "Your Smart Recipe Assistant",
+      "description": "Generate personalized recipes from ingredients you already have"
+    },
+    "slide2": {
+      "title": "Track Your Pantry",
+      "description": "Easily manage ingredients and never waste food"
+    },
+    "slide3": {
+      "title": "Join Our Community",
+      "description": "Share your creations and discover recipes from others"
+    },
+    "getStarted": "Get Started",
+    "skip": "Skip",
+    "next": "Next"
+  },
+  "home": {
+    "greeting": "Hello, {{name}}!",
+    "greetingDefault": "Hello, Chef!",
+    "quickActions": "Quick Actions",
+    "generateRecipe": "Generate Recipe",
+    "managePantry": "Manage Pantry",
+    "exploreCommunity": "Explore Community"
+  },
+  "pantry": {
+    "title": "My Pantry",
+    "addItem": "Add Item",
+    "expiringSoon": "Expiring Soon",
+    "categories": "Categories",
+    "searchPlaceholder": "Search ingredients...",
+    "emptyState": "Your pantry is empty. Start adding ingredients!",
+    "quickAdd": "Quick Add Staples"
+  },
+  "recipe": {
+    "generate": "Generate Recipe",
+    "generating": "Generating your recipe...",
+    "ingredients": "Ingredients",
+    "steps": "Steps",
+    "nutrition": "Nutrition",
+    "estimated": "Estimated",
+    "verified": "Verified",
+    "allergyWarning": "⚠️ Contains: {{allergens}}",
+    "startCooking": "Start Cooking",
+    "saveRecipe": "Save Recipe",
+    "shareRecipe": "Share Recipe",
+    "boostProtein": "Boost Protein",
+    "swapIngredient": "Swap Ingredient",
+    "regenerate": "Regenerate",
+    "proTips": "Pro Tips",
+    "showAllSteps": "Show All Steps",
+    "collapseSteps": "Collapse Steps"
+  },
+  "cooking": {
+    "step": "Step {{current}} of {{total}}",
+    "back": "Back",
+    "repeat": "Repeat",
+    "next": "Next",
+    "finish": "Finish",
+    "voicePlayback": "Voice Playback"
+  },
+  "community": {
+    "title": "Community",
+    "shareRecipe": "Share Your Recipe",
+    "caption": "Caption",
+    "tags": "Tags",
+    "post": "Post",
+    "like": "Like",
+    "comment": "Comment",
+    "share": "Share",
+    "emptyState": "No posts yet. Be the first to share!"
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "dietaryPreferences": "Dietary Preferences",
+    "goals": "Goals",
+    "notifications": "Notifications",
+    "language": "Language",
+    "about": "About",
+    "version": "Version {{version}}"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "done": "Done",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "ok": "OK",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "nutrition": {
+    "calories": "Calories",
+    "protein": "Protein",
+    "carbs": "Carbs",
+    "fat": "Fat",
+    "perServing": "per serving"
+  },
+  "dietary": {
+    "vegan": "Vegan",
+    "vegetarian": "Vegetarian",
+    "gluten_free": "Gluten Free",
+    "low_cost": "Low Cost",
+    "none": "No Restriction"
+  },
+  "goals": {
+    "fitness": "Fitness",
+    "family": "Family",
+    "health": "Health"
+  },
+  "timing": {
+    "pre_workout": "Pre-Workout",
+    "post_workout": "Post-Workout",
+    "recovery": "Recovery",
+    "kid_friendly": "Kid-Friendly",
+    "family_friendly": "Family-Friendly"
+  }
+}
