@@ -16,6 +16,7 @@ type NestedKeyOf<T> = T extends object
     }[keyof T]
   : never;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 type TranslationKey = NestedKeyOf<TranslationKeys>;
 
 /**
@@ -25,6 +26,7 @@ type TranslationKey = NestedKeyOf<TranslationKeys>;
  */
 export function t(key: string, params?: Record<string, string | number>): string {
   const keys = key.split('.');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let value: any = translations;
 
   for (const k of keys) {

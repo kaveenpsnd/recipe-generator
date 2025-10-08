@@ -5,7 +5,12 @@
 
 export type DietaryFilter = 'vegan' | 'vegetarian' | 'gluten_free' | 'low_cost' | 'none';
 export type Goal = 'fitness' | 'family' | 'health';
-export type TimingTag = 'pre_workout' | 'post_workout' | 'recovery' | 'kid_friendly' | 'family_friendly';
+export type TimingTag =
+  | 'pre_workout'
+  | 'post_workout'
+  | 'recovery'
+  | 'kid_friendly'
+  | 'family_friendly';
 export type PantryMatch = 'uses_pantry' | 'needs_items';
 export type IngredientSource = 'manual' | 'camera' | 'barcode' | 'voice';
 export type VerifiedBy = 'chef' | 'nutritionist' | null;
@@ -25,9 +30,9 @@ export interface UserProfile {
 export interface PantryItem {
   id: string;
   name: string;
-  quantity?: string;   // "1L", "500g", "2 cups"
-  category?: string;   // "Vegetables", "Dairy", "Grains", etc.
-  expiresAt?: number;  // epoch ms
+  quantity?: string; // "1L", "500g", "2 cups"
+  category?: string; // "Vegetables", "Dairy", "Grains", etc.
+  expiresAt?: number; // epoch ms
   source: IngredientSource;
   valid: boolean;
   addedAt: number;
@@ -38,7 +43,7 @@ export interface Nutrition {
   protein_g: number;
   carbs_g: number;
   fat_g: number;
-  verified: boolean;   // false → show "Estimated"
+  verified: boolean; // false → show "Estimated"
 }
 
 export interface Ingredient {
@@ -59,7 +64,7 @@ export interface Recipe {
   nutrition: Nutrition;
   timingTag?: TimingTag;
   pantryMatch: PantryMatch;
-  allergyWarnings?: string[];   // e.g., ["peanuts", "dairy"]
+  allergyWarnings?: string[]; // e.g., ["peanuts", "dairy"]
   ingredients: Ingredient[];
   steps: RecipeStep[];
   proTips?: string[];

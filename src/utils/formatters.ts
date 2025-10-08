@@ -104,7 +104,7 @@ export function isValidEmail(email: string): boolean {
  * Calculate total macros
  */
 export function calculateTotalMacros(protein: number, carbs: number, fat: number): number {
-  return (protein * 4) + (carbs * 4) + (fat * 9);
+  return protein * 4 + carbs * 4 + fat * 9;
 }
 
 /**

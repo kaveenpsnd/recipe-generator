@@ -8,12 +8,12 @@ export const colors = {
   primary: '#FF6B35',
   primaryDark: '#E85A2D',
   primaryLight: '#FF8A5C',
-  
+
   // Secondary palette
   secondary: '#4ECDC4',
   secondaryDark: '#3DB5AD',
   secondaryLight: '#6ED9D1',
-  
+
   // Neutrals
   background: '#FFFFFF',
   surface: '#F7F9FC',
@@ -22,7 +22,7 @@ export const colors = {
   textSecondary: '#6B7280',
   textLight: '#9CA3AF',
   border: '#E5E7EB',
-  
+
   // Semantic colors
   success: '#10B981',
   successLight: '#D1FAE5',
@@ -32,12 +32,12 @@ export const colors = {
   errorLight: '#FEE2E2',
   info: '#3B82F6',
   infoLight: '#DBEAFE',
-  
+
   // Nutrition colors (for macros)
   protein: '#8B5CF6',
   carbs: '#F59E0B',
   fat: '#EC4899',
-  
+
   // Special
   overlay: 'rgba(0, 0, 0, 0.5)',
   disabled: '#D1D5DB',
