@@ -17,6 +17,12 @@ import CommunityScreen from '../screens/community/CommunityScreen';
 import SavedScreen from '../screens/saved/SavedScreen';
 import SettingsScreen from '../screens/settings/SettingsScreen';
 
+// Recipe Flow Screens
+import RecipeGenerationScreen from '../screens/recipe/RecipeGenerationScreen';
+import RecipeDetailScreen from '../screens/recipe/RecipeDetailScreen';
+import StepsOverviewScreen from '../screens/recipe/StepsOverviewScreen';
+import StepPlayerScreen from '../screens/recipe/StepPlayerScreen';
+
 import theme from '../../theme';
 import type { AuthStackParamList, MainTabsParamList } from '../../types/navigation';
 
@@ -89,7 +95,7 @@ function MainTabNavigator() {
 }
 
 export default function RootNavigator() {
-  const isAuthenticated = false; // TODO: Replace with actual auth state
+  const isAuthenticated = true; // TODO: Replace with actual auth state
 
   return (
     <NavigationContainer>
@@ -97,7 +103,13 @@ export default function RootNavigator() {
         {!isAuthenticated ? (
           <Stack.Screen name="Auth" component={AuthNavigator} />
         ) : (
-          <Stack.Screen name="Main" component={MainTabNavigator} />
+          <>
+            <Stack.Screen name="Main" component={MainTabNavigator} />
+            <Stack.Screen name="RecipeGeneration" component={RecipeGenerationScreen} />
+            <Stack.Screen name="RecipeDetail" component={RecipeDetailScreen} />
+            <Stack.Screen name="StepsOverview" component={StepsOverviewScreen} />
+            <Stack.Screen name="StepPlayer" component={StepPlayerScreen} />
+          </>
         )}
       </Stack.Navigator>
     </NavigationContainer>

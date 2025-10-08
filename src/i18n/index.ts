@@ -5,20 +5,6 @@
 
 import translations from './en.json';
 
-type TranslationKeys = typeof translations;
-type NestedKeyOf<T> = T extends object
-  ? {
-      [K in keyof T]: K extends string
-        ? T[K] extends object
-          ? `${K}.${NestedKeyOf<T[K]>}`
-          : K
-        : never;
-    }[keyof T]
-  : never;
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-type TranslationKey = NestedKeyOf<TranslationKeys>;
-
 /**
  * Get translation by key with optional interpolation
  * @param key - Translation key (e.g., "auth.login")

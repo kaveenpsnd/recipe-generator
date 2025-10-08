@@ -88,7 +88,7 @@ function selectRecipeTemplate(ingredients: string[]): (typeof RECIPE_TEMPLATES)[
 
   for (const template of RECIPE_TEMPLATES) {
     const matches = template.baseIngredients.filter((ing) =>
-      Array.from(ingredientSet).some((userIng) => userIng.includes(ing) || ing.includes(userIng)),
+      Array.from(ingredientSet).some((userIng) => userIng.includes(ing) || ing.includes(userIng))
     );
     if (matches.length >= 2) {
       return template;
@@ -99,10 +99,7 @@ function selectRecipeTemplate(ingredients: string[]): (typeof RECIPE_TEMPLATES)[
   return RECIPE_TEMPLATES[0];
 }
 
-function adjustNutritionForGoals(
-  baseNutrition: Nutrition,
-  goals: string[],
-): Nutrition {
+function adjustNutritionForGoals(baseNutrition: Nutrition, goals: string[]): Nutrition {
   const adjusted = { ...baseNutrition };
 
   if (goals.includes('fitness')) {
@@ -186,7 +183,7 @@ export async function generateRecipe(input: GenerateRecipeInput): Promise<Recipe
  */
 export async function generateAlternatives(
   _original: Recipe,
-  count: number = 2,
+  count: number = 2
 ): Promise<Recipe[]> {
   await new Promise((resolve) => setTimeout(resolve, 1000));
 

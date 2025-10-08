@@ -80,7 +80,7 @@ export const usePantryStore = create<PantryState>((set, get) => ({
   quickAddStaples: async () => {
     const existingNames = new Set(get().items.map((item) => item.name.toLowerCase()));
     const newStaples = QUICK_ADD_STAPLES.filter(
-      (staple) => !existingNames.has(staple.name.toLowerCase()),
+      (staple) => !existingNames.has(staple.name.toLowerCase())
     );
 
     const newItems = newStaples.map(
@@ -91,7 +91,7 @@ export const usePantryStore = create<PantryState>((set, get) => ({
         source: 'manual',
         valid: true,
         addedAt: Date.now(),
-      }),
+      })
     );
 
     const items = [...get().items, ...newItems];

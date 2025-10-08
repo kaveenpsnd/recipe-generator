@@ -55,22 +55,25 @@ export default function RecipeGenerationScreen() {
     });
 
     if (currentRecipe) {
-      navigation.navigate('RecipeDetail' as never, {
-        recipe: currentRecipe,
-        fromGeneration: true,
-      } as never);
+      navigation.navigate(
+        'RecipeDetail' as never,
+        {
+          recipe: currentRecipe,
+          fromGeneration: true,
+        } as never
+      );
     }
   };
 
   const toggleDietary = (filter: DietaryFilter) => {
     setSelectedDietary((prev) =>
-      prev.includes(filter) ? prev.filter((f) => f !== filter) : [...prev, filter],
+      prev.includes(filter) ? prev.filter((f) => f !== filter) : [...prev, filter]
     );
   };
 
   const toggleGoal = (goal: Goal) => {
     setSelectedGoals((prev) =>
-      prev.includes(goal) ? prev.filter((g) => g !== goal) : [...prev, goal],
+      prev.includes(goal) ? prev.filter((g) => g !== goal) : [...prev, goal]
     );
   };
 
@@ -97,9 +100,7 @@ export default function RecipeGenerationScreen() {
           </View>
 
           <TouchableOpacity style={styles.pantryButton} onPress={handleUsePantry}>
-            <Text style={styles.pantryButtonText}>
-              Use My Pantry ({pantryItems.length} items)
-            </Text>
+            <Text style={styles.pantryButtonText}>Use My Pantry ({pantryItems.length} items)</Text>
           </TouchableOpacity>
 
           {/* Ingredient Chips */}
