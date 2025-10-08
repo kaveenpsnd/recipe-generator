@@ -26,7 +26,7 @@ export default function StepsOverviewScreen() {
   }
 
   const handleStartCooking = () => {
-    navigation.navigate('StepPlayer' as never, { recipe, stepIndex: 0 } as never);
+    navigation.navigate('StepPlayer', { recipe, stepIndex: 0 });
   };
 
   return (
@@ -59,13 +59,10 @@ export default function StepsOverviewScreen() {
               key={step.index}
               style={styles.stepCard}
               onPress={() =>
-                navigation.navigate(
-                  'StepPlayer' as never,
-                  {
-                    recipe,
-                    stepIndex: step.index - 1,
-                  } as never
-                )
+                navigation.navigate('StepPlayer', {
+                  recipe,
+                  stepIndex: step.index - 1,
+                })
               }
             >
               <View style={styles.stepHeader}>

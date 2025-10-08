@@ -42,11 +42,15 @@ export type CommunityStackParamList = {
   CreatePost: undefined;
 };
 
-export type RootStackParamList = AuthStackParamList &
-  MainTabsParamList &
-  HomeStackParamList &
-  PantryStackParamList &
-  CommunityStackParamList;
+// Root level screens (outside of tabs)
+export type RootStackParamList = {
+  Auth: undefined;
+  Main: undefined;
+  RecipeGeneration: { pantryItems?: PantryItem[] };
+  RecipeDetail: { recipe: Recipe; fromGeneration?: boolean };
+  StepsOverview: { recipe: Recipe };
+  StepPlayer: { recipe: Recipe; stepIndex: number };
+};
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace

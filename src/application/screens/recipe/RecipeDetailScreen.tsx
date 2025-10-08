@@ -56,7 +56,7 @@ export default function RecipeDetailScreen() {
   };
 
   const handleStartCooking = () => {
-    navigation.navigate('StepsOverview' as never, { recipe } as never);
+    navigation.navigate('StepsOverview', { recipe });
   };
 
   const openRefineModal = (action: typeof refineAction) => {
@@ -185,9 +185,7 @@ export default function RecipeDetailScreen() {
               <TouchableOpacity
                 key={alt.id}
                 style={styles.alternativeCard}
-                onPress={() =>
-                  navigation.navigate('RecipeDetail' as never, { recipe: alt } as never)
-                }
+                onPress={() => navigation.navigate('RecipeDetail', { recipe: alt })}
               >
                 <Text style={styles.alternativeTitle}>{alt.title}</Text>
                 <Ionicons name="chevron-forward" size={20} color={theme.colors.textSecondary} />

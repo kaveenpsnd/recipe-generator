@@ -24,11 +24,15 @@ import StepsOverviewScreen from '../screens/recipe/StepsOverviewScreen';
 import StepPlayerScreen from '../screens/recipe/StepPlayerScreen';
 
 import theme from '../../theme';
-import type { AuthStackParamList, MainTabsParamList } from '../../types/navigation';
+import type {
+  AuthStackParamList,
+  MainTabsParamList,
+  RootStackParamList,
+} from '../../types/navigation';
 
 const AuthStack = createStackNavigator<AuthStackParamList>();
 const MainTabs = createBottomTabNavigator<MainTabsParamList>();
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 
 function AuthNavigator() {
   return (

@@ -55,13 +55,10 @@ export default function RecipeGenerationScreen() {
     });
 
     if (currentRecipe) {
-      navigation.navigate(
-        'RecipeDetail' as never,
-        {
-          recipe: currentRecipe,
-          fromGeneration: true,
-        } as never
-      );
+      navigation.navigate('RecipeDetail', {
+        recipe: currentRecipe,
+        fromGeneration: true,
+      });
     }
   };
 
